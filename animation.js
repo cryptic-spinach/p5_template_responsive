@@ -1,4 +1,6 @@
 let graphics;
+let centerX;
+let centerY;
 
 function setup() {
   if (windowWidth/windowHeight > 1.77) {
@@ -9,6 +11,8 @@ function setup() {
   }
 
   graphics = createGraphics(width, height);
+  centerX = width/2;
+  centerY = height/2;
 }
 
 function draw() {
@@ -18,7 +22,7 @@ function draw() {
 
   graphics.noStroke();
   graphics.fill("#0ED0A9")
-  graphics.ellipse(400, 200, 150, 150);
+  graphics.ellipse(centerX, centerY, 150, 150);
 
   image(graphics, 0, 0, width, height);
   graphics.reset();
